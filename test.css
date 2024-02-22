@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background-color: #E6E6E6;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    font-weight: bold;
+    font-size: 2em;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    background-color: #FFF;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-heading {
+    font-weight: bold;
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.task-description {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.data-heading {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.data-item {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 20px;
+}
+
+.data-label {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.data-value {
+    display: block;
+    white-space: pre;
+    font-size: 1.2em;
+    color: #333;
+    border: solid 1px #CCC;
+    padding: 10px;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.language-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'><polygon points='0,0 7,8 14,0'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%, 0 0;
+    background-size: contain;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    padding: 0 30px 0 10px;
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+    order: 1;
+    flex-grow: 1;
+}
+
+.submit-btn {
+    appearance: button;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    order: 3;
+    flex-grow: 1;
+}
+
+.submit-btn:hover {
+    background-color: #1D853F;
+}
+
+.btn-outline-primary {
+    border: solid 2px #28A74B;
+    color: #28A74B;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28A74B;
+    color: #FFF;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.language-selector {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-field {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: vertical;
+  overflow-y: auto;
+  height: 30em;
+  opacity: 0;
+  position: absolute;
+  width: 57%;
+}
+
+
+.input-field::placeholder {
+  color: #aaa;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.25);
+}
+
+.output-field {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  display: block;
+  font-size: 16px;
+  resize: vertical;
+  overflow-y: auto;
+  height: 30em;
+}
+
+
+.output-field::placeholder {
+  color: #aaa;
+}
+
+.output-field:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.25);
+}
+
+.caret {
+  display: inline-block;
+  vertical-align: bottom;
+  animation: blink 1s steps(1, start) infinite;
+  color: black;
+}
+
+@keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}

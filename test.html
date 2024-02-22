@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"><p class="header-text">Solve Test</p></div>
+        <div class="header-right"><p class="header-text">Время: 00:00:00</p></div>
+        <div class="header-right"><p class="header-text">Тест №1</p></div>
+    </div>
+    <div class="container">
+        <h1 class="task-heading">Заголовок задачи</h1>
+        <div class="task-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel convallis nunc. Suspendisse at magna mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Donec nec orci vitae odio ultrices tempor a non lacus.
+        </div>
+        <div class="data-container">
+            <div class="data-item">
+              <strong>Вход:</strong>
+              <pre><code>[1, 1, 2, 3]</code></pre>
+            </div>
+            <div class="data-item">
+              <strong>Вывод:</strong>
+              <pre><code>4</code></pre>
+            </div>
+        </div>
+        <div class="input-field" contenteditable></div>
+        <div class="output-field"><span class="caret">|</span></div>
+        <div id="editor-container" class="input-container">
+          <select class="language-selector">
+            <option value="none" selected>Выберите язык</option>
+            <option value="lang-c">C</option>
+            <option value="lang-cpp">C++</option>
+          </select>
+        </div>
+        <button class="submit-btn btn-outline-primary">Отправить решение</button>
+        <script type="text/javascript" src="test.js"></script>
+    </div>
+</body>
+</html>
